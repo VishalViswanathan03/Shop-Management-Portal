@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using ShopPortal.Data;
+
 namespace ShopPortal
 {
     public class Program
@@ -8,6 +11,7 @@ namespace ShopPortal
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ApplicationDbContext>(o => o.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 
