@@ -2,10 +2,10 @@
 {
     public class Items
     {
-        Guid Id { get; set; }
-        public string Item { get; set; }
+        public Guid Id { get; set; }
+        public string? Item { get; set; }
         public double Price { get; set; }    
         public int Quantity { get; set; }
-        public double Total {  get; set; }
+        public double Total { get; set; }
     }
 }
